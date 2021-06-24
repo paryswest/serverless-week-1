@@ -15,9 +15,8 @@ module.exports = async function (context, req) {
     //put what you want to turn into base64 inside "originaldata"
     //"originaldata" will be encoded in base64.
 
-    
     context.res = {
         // status: 200, /* Defaults to 200 */
-        body: base64data
+        body: {base64data}
     };
 }

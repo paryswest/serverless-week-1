@@ -29,16 +29,18 @@ module.exports = async function (context, req) {
     (key) => emotions[key] === Math.max(...objects)
   );
 
+  let gifUrl = await findGifs(main_emotion);
+
   context.res = {
-    body: main_emotion,
+    body: gifUrl,
   };
   console.log(result);
   context.done();
 };
 
 async function analyzeImage(img) {
-  const subscriptionKey = process.env.SUBSCRIPTIONKEY;
-  const uriBase = process.env.ENDPOINT + '/face/v1.0/detect';
+    const subscriptionKey = process.env.SUBSCRIPTIONKEY;
+    const uriBase = process.env.ENDPOINT + '/face/v1.0/detect';
 
   let params = new URLSearchParams({
     returnFaceId: 'true',
@@ -59,4 +61,17 @@ async function analyzeImage(img) {
 
   let emotionData = await resp.json();
   return emotionData;
+}
+
+async function findGifs(emotion) {
+  const giphykey = process.env.giphykey;
+  
+  let gifresponse = await fetch(
+    'https://api.giphy.com/v1/gifs/translate?api_key=' +
+      giphykey +
+      '&s=' +
+      emotion
+  );
+  let gifresp = await gifresponse.json();
+  return gifresp.data.url;
 }

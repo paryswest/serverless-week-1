@@ -75,3 +75,4 @@ async function findGifs(emotion) {
   let gifresp = await gifresponse.json();
   return gifresp.data.url;
 }
+

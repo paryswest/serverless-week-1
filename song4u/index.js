@@ -18,7 +18,7 @@ module.exports = async function (context, req) {
 
   let age = result[0].faceAttributes.age;
 
-  let id = 0;
+  let id = '';
 
   if (age > 5 && age < 25) {
     id = 'GenZ';
@@ -39,9 +39,10 @@ module.exports = async function (context, req) {
 };
 
 async function analyzeImage(img) {
-//   const subscriptionKey = process.env.SUBSCRIPTIONKEY;
-//   const uriBase = process.env.ENDPOINT + '/face/v1.0/detect';
+  const subscriptionKey = process.env.SUBSCRIPTION_KEY;
+  const uriBase = process.env.ENDPOINT + '/face/v1.0/detect';
 
+  
 
 
   let params = new URLSearchParams({

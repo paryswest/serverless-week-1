@@ -39,12 +39,10 @@ module.exports = async function (context, req) {
 };
 
 async function analyzeImage(img) {
-    // const subscriptionKey = process.env.SUBSCRIPTIONKEY;
-    // const uriBase = process.env.ENDPOINT + '/face/v1.0/detect';
-    
-    const subscriptionKey = "a6d27d537aae4a4f965954450644a240"
-    const uriBase = "https://shogomakishimaxx.cognitiveservices.azure.com/face/v1.0/detect"
-    
+//   const subscriptionKey = process.env.SUBSCRIPTIONKEY;
+//   const uriBase = process.env.ENDPOINT + '/face/v1.0/detect';
+
+
 
   let params = new URLSearchParams({
     returnFaceId: 'true',

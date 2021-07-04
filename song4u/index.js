@@ -59,6 +59,7 @@ async function analyzeImage(img) {
     headers: {
       'Content-Type': 'application/octet-stream',
       'Ocp-Apim-Subscription-Key': subscriptionKey,
+      // This is where you authenticate the API request!
     },
   });
 

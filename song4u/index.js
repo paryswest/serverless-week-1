@@ -46,7 +46,7 @@ async function analyzeImage(img) {
 
   let params = new URLSearchParams({
     returnFaceId: 'true',
-    returnFaceAttributes: 'age', //FILL IN THIS LINE
+    returnFaceAttributes: ['age'], //FILL IN THIS LINE
   });
 
   //COMPLETE THE CODE

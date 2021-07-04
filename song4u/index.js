@@ -34,7 +34,7 @@ module.exports = async function (context, req) {
   } else {
     id = 'Unknown';
   }
-   context.log(song);
+  context.log(song);
   context.res = {
     // status: 200, /*Defaults to 200 */
     body: `We guessed you're part of this generation: ${gener}! Happy listening! ${song}`,
@@ -42,9 +42,8 @@ module.exports = async function (context, req) {
 };
 
 async function analyzeImage(img) {
-    const subscriptionKey = process.env.SUBSCRIPTIONKEY2;
-    const uriBase = process.env.ENDPOINT2 + '/face/v1.0/detect';
-
+  const subscriptionKey = process.env.SUBSCRIPTIONKEY2;
+  const uriBase = process.env.ENDPOINT2 + '/face/v1.0/detect';
 
   let params = new URLSearchParams({
     returnFaceId: 'true',

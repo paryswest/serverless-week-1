@@ -19,8 +19,6 @@ module.exports = async function (context, req) {
   let age = result[0].faceAttributes.age;
   //   context.log(age);
 
-  const song = retrieveSong(0);
-
   let id = '';
 
   if (age > 5 && age < 25) {
@@ -34,6 +32,7 @@ module.exports = async function (context, req) {
   } else {
     id = 'Unknown';
   }
+  const song = retrieveSong(id);
   context.log(song);
   context.res = {
     // status: 200, /*Defaults to 200 */

@@ -19,7 +19,7 @@ module.exports = async function (context, req) {
   let age = result[0].faceAttributes.age;
   //   context.log(age);
 
-  const song = retrieveSong(gener);
+  const song = retrieveSong(0);
 
   let id = '';
 
@@ -34,7 +34,7 @@ module.exports = async function (context, req) {
   } else {
     id = 'Unknown';
   }
-  //   context.log(id);
+   context.log(song);
   context.res = {
     // status: 200, /*Defaults to 200 */
     body: `We guessed you're part of this generation: ${gener}! Happy listening! ${song}`,
@@ -42,12 +42,9 @@ module.exports = async function (context, req) {
 };
 
 async function analyzeImage(img) {
-  //   const subscriptionKey = process.env.SUBSCRIPTIONKEY2;
-  //   const uriBase = process.env.ENDPOINT2 + '/face/v1.0/detect';
+    const subscriptionKey = process.env.SUBSCRIPTIONKEY2;
+    const uriBase = process.env.ENDPOINT2 + '/face/v1.0/detect';
 
-  const subscriptionKey = 'a6d27d537aae4a4f965954450644a240';
-  const uriBase =
-    'https://shogomakishimaxx.cognitiveservices.azure.com/face/v1.0/detect';
 
   let params = new URLSearchParams({
     returnFaceId: 'true',

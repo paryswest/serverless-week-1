@@ -33,10 +33,10 @@ module.exports = async function (context, req) {
     id = 'Unknown';
   }
   const song = retrieveSong(id);
-  context.log(song);
+//   context.log(song);
   context.res = {
     // status: 200, /*Defaults to 200 */
-    body: `We guessed you're part of this generation: ${gener}! Happy listening! ${song}`,
+    body: `We guessed you're part of this generation: ${id}! Happy listening! ${song}`,
   };
 };
 

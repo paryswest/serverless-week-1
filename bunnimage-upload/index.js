@@ -36,7 +36,6 @@ module.exports = async function (context, req) {
         body: responseMessage
     };
 }
-<<<<<<< HEAD
 
 async function uploadFile(parsedBody, ext) {
     const blobServiceClient = BlobServiceClient.fromConnectionString(connectionString);
@@ -50,5 +49,3 @@ async function uploadFile(parsedBody, ext) {
 
     return "Your blob is saved"
 }
-=======
->>>>>>> f2ffed0e3801e049afa8bd939ea0e2f1d1bb9522

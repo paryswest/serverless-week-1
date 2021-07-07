@@ -9,14 +9,11 @@ module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
     
     // starter template
-<<<<<<< HEAD
 
     var boundary = multipart.getBoundary(req.headers['content-type']);
     var body = req.body;
     var parsedBody = multipart.Parse(body, boundary);
 
-=======
->>>>>>> f2ffed0e3801e049afa8bd939ea0e2f1d1bb9522
 
         var filetype = parsedBody[0].type;
     if (filetype == "image/png") {

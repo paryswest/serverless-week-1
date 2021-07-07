@@ -24,5 +24,10 @@
   "bugs": {
     "url": "https://github.com/paryswest/serverless-week-1/issues"
   },
+<<<<<<< HEAD
   "homepage": "https://github.com/paryswest/serverless-week-1#readme"
+=======
+  "dependencies": {},
+  "devDependencies": {}
+>>>>>>> 4979c8a777512aff8a58f2000794a0b2054b2be4
 }

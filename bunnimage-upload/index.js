@@ -7,6 +7,8 @@ const { BlobServiceClient } = require("@azure/storage-blob");
 
 module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
+    
+    // starter template
 
     var boundary = multipart.getBoundary(req.headers['content-type']);
     var body = req.body;
@@ -31,6 +33,7 @@ module.exports = async function (context, req) {
         body: responseMessage
     };
 }
+<<<<<<< HEAD
 
 async function uploadFile(parsedBody, ext) {
     const blobServiceClient = BlobServiceClient.fromConnectionString(connectionString);
@@ -44,3 +47,5 @@ async function uploadFile(parsedBody, ext) {
 
     return "Your blob is saved"
 }
+=======
+>>>>>>> 4979c8a777512aff8a58f2000794a0b2054b2be4

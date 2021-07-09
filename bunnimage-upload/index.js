@@ -15,7 +15,7 @@ module.exports = async function (context, req) {
     var parsedBody = multipart.Parse(body, boundary);
 
 
-        var filetype = parsedBody[0].type;
+    var filetype = parsedBody[0].type;
     if (filetype == "image/png") {
         ext = "png";
     } else if (filetype == "image/jpeg") {

@@ -1,4 +1,4 @@
-function getImage(event) {
+async function getImage(event) {
   event.preventDefault();
   var myform = document.getElementById('myform');
   //get image and filename uploaded by user via the form

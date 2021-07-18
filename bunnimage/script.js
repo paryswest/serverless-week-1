@@ -21,13 +21,48 @@ async function getImage(event) {
         headers: {
           "codename": nameInput.value
         },
-        body: payload,
+        body: payload
       });
 
       $('#output').text('Your image has been stored successfully!');
     } catch (err) {
       $('#output').text(err);
     }
+  } else {
+    alert('No name error.');
+  }
+}
+
+async function downloadImage() {
+  let username = document.getElementById('downloadusername').value
+  console.log("username:" + username)
+
+  if ( username != '') {
+
+   try {
+    let url = "https://hackervoicee.azurewebsites.net/api/bunnimage-download"
+
+    console.log("Documented file name; making GET request to download image"); 
+  
+   fetch(url, {
+     headers: {
+     username : username
+     }
+   })
+    .then(resp => {
+      return resp.json()
+      })
+    .then(data => {
+      console.log(data)
+      console.log(data.downloadUri)
+      window.open(data.downloadUri, "_self")
+      });
+  
+   } catch(err) {
+      alert(err)
+   }
+
+  
   } else {
     alert('No name error.');
   }

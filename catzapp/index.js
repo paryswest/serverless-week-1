@@ -22,7 +22,7 @@ function y1k3s() {
 
     let name4 = document.getElementById("name4").value
 
-    let endpoint4 =  "https://cataas.com/cat/cute/says/" + name4
+    let endpoint4 = "https://cataas.com/cat/cute/says/" + name4
     if(name4 != '') {
         document.getElementById("image4").src = endpoint4 //call to API
     }

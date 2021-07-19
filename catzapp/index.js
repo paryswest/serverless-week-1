@@ -8,7 +8,7 @@ function y1k3s() {
 
     let name2 = document.getElementById("name2").value
 
-    let endpoint2 = "https://cataas.com/cat/cute/says/" + name2
+    let endpoint2 =  "https://cataas.com/cat/cute/says/" + name2
     if(name2 != '') {
         document.getElementById("image2").src = endpoint2 //call to API
     }

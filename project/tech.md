@@ -15,7 +15,9 @@ I will need to be able to connect to these sites, so I guess this is the best ca
 3. https://mercuryretrogradeapi.com/about.html
    Provides mercury retrograde information //The time that its NOT good to travel, communicate with care, etc.  
 4. https://www.astro.com/swisseph/swephprg.htm#_Toc71121139
-   If I can somehow find a way for this to like not be in Java (or what ever language this is in) and turn it in to Javascript then I can use this. This is like the grand hall of apps. All of the information that I need is here, but yeah...foreign code language strikes again.       
+   If I can somehow find a way for this to like not be in Java (or what ever language this is in) and turn it in to Javascript then I can use this. This is like the grand hall of apps. All of the information that I need is here, but yeah...foreign code language strikes again. 
+5. https://rapidapi.com/stefan.skliarov/api/AccuWeather
+   Going along, decided to make a weather app that tells you your horoscope. Something light and simple.        
     
 
 ### Packages/Libraries/Databases

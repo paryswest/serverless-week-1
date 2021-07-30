@@ -3,20 +3,20 @@
 
 ## Week 1
 
-### [Task Name]:
+### [Build the front end]:
 
 #### Description
-- [Replace with description]
+- The front end of the application where the user will be able to see information that is popping up on the screen
 
 #### ETA:
 > How long do you think it will take to complete this?
-- [Replace with eta]
+- I believe that this project will take about 2 weeks to perfect and make sure that it's up and running and another week or so to put together the finishing touches. 
 
 #### Objective:
 > Checklist of everything you need to do to complete this issue
-- [ ] [Replace with small task  1]
-- [ ] [Replace with small task  2]
-- [ ] [Replace with small task  3]
+- [ ] [Make sure that the front end is functional]
+- [ ] [Integrate any APIs that are needed]
+- [ ] [Make it look stylish]
 
 ## Week 2
 

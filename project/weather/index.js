@@ -6,25 +6,25 @@ const temp = document.querySelector('.temp');
 
 const days = document.querySelector('.days');
 
-const starSign = (value) => {
-fetch("http://ohmanda.com/api/horoscope/aries")
-  .then(response => response.json())
-  .then(data => { $(".daily-horoscope").append(JSON.stringify(data))  });
-//   fetch('	https://ohmanda.com/api/horoscope/' + value, {
-//     headers: {
-//       'Access-Control-Allow-Origin': '*',
-//     },
-//   })
-//     .then((response) => response.json())
-//     .then((data) => {
-//       console.log(data);
-//       let nameValue = data['name'];
-//       let tempValue = data['main']['temp'];
-//       let descValue = data['weather'][0]['description'];
+// const starSign = (value) => {
+// fetch("http://ohmanda.com/api/horoscope/aries")
+//   .then(response => response.json())
+//   .then(data => { $(".daily-horoscope").append(JSON.stringify(data))  });
+// //   fetch('	https://ohmanda.com/api/horoscope/' + value, {
+// //     headers: {
+// //       'Access-Control-Allow-Origin': '*',
+// //     },
+// //   })
+// //     .then((response) => response.json())
+// //     .then((data) => {
+// //       console.log(data);
+// //       let nameValue = data['name'];
+// //       let tempValue = data['main']['temp'];
+// //       let descValue = data['weather'][0]['description'];
 
-//       horoscope.innerHTML = nameValue;
-//     });
-};
+// //       horoscope.innerHTML = nameValue;
+// //     });
+// };
 
 button.addEventListener('click', function () {
   fetch(
